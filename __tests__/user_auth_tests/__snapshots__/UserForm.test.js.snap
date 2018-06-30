@@ -23,6 +23,7 @@ exports[`renders without crashing 1`] = `
     <Styled(Input)
       onChangeText={[Function]}
       secureTextEntry={true}
+      value=""
     />
   </Styled(Item)>
   <Button

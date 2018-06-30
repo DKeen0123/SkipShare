@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CreateUser from '../../user/CreateUser';
+import CreateUser from '../../components/user/CreateUser';
 
 const props = { type: 'Register' }
 const createUser = shallow(<CreateUser {...props} />);

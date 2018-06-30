@@ -2,6 +2,13 @@
 
 exports[`renders without crashing 1`] = `
 <Component>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    Register
+  </Text>
   <UserForm
     onSubmit={[Function]}
     type="Register"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import UserForm from '../../user/UserForm';
+import UserForm from '../../components/user/UserForm';
 
 const props = { type: 'Register' }
 const userForm = shallow(<UserForm {...props} />);

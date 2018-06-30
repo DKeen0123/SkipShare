@@ -1,13 +1,27 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Button } from 'react-native'
 
 import CreateUser from './CreateUser';
+import LoginUser from './LoginUser';
 
 export default class Login extends Component {
+  state = {
+    register: true
+  }
+
   render() {
     return (
-      <View>
-        <CreateUser />
+      <View style={styles.container}>
+        {this.state.register ? (
+          <CreateUser />
+        ) : (
+          <LoginUser />
+        )
+        }
+        <Button
+          onPress={() => this.setState({ register: !this.state.register })}
+          title={this.state.register ? 'Login' : 'Register'}
+        />
       </View>
     )
   }

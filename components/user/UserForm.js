@@ -5,7 +5,8 @@ import { Form, Item, Input, Label } from 'native-base';
 export default class UserForm extends Component {
 
   state = {
-    email: ''
+    email: '',
+    password: ''
   }
 
   submitForm = () => {

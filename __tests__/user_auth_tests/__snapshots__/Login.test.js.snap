@@ -1,7 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders without crashing 1`] = `
-<Component>
+<Component
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
   <CreateUser />
+  <Button
+    onPress={[Function]}
+    title="Login"
+  />
 </Component>
 `;
