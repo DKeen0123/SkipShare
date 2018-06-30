@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Styled(Form)>
+  <Styled(Item)
+    floatingLabel={true}
+  >
+    <Styled(Label)>
+      Email
+    </Styled(Label)>
+    <Styled(Input)
+      keyboardType="email-address"
+      onChangeText={[Function]}
+      value=""
+    />
+  </Styled(Item)>
+  <Styled(Item)
+    floatingLabel={true}
+  >
+    <Styled(Label)>
+      Password
+    </Styled(Label)>
+    <Styled(Input)
+      onChangeText={[Function]}
+      secureTextEntry={true}
+    />
+  </Styled(Item)>
+  <Button
+    onPress={[Function]}
+  />
+</Styled(Form)>
+`;
