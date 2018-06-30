@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
+import Login from './user/Login';
+
 class Home extends Component {
   render() {
     return (
@@ -19,6 +21,7 @@ const Navigator = createStackNavigator({
 });
 
 const NavWrapper = () => {
+  return <Login />;
   return <Navigator />;
 }
 
