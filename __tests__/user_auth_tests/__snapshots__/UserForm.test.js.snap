@@ -27,6 +27,7 @@ exports[`renders without crashing 1`] = `
   </Styled(Item)>
   <Button
     onPress={[Function]}
+    title="Register"
   />
 </Styled(Form)>
 `;

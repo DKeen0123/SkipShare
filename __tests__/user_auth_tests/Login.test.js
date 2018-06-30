@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import UserForm from '../../user/UserForm';
+import Login from '../../user/Login';
 
 const props = { type: 'Register' }
-const userForm = shallow(<UserForm {...props} />);
+const login = shallow(<Login {...props} />);
 
 it('renders without crashing', () => {
-  expect(userForm).toMatchSnapshot();
+  expect(login).toMatchSnapshot();
 });
