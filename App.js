@@ -5,7 +5,7 @@ import { HttpLink, InMemoryCache, ApolloClient } from 'apollo-boost';
 
 import Navigator from './components/Navigator';
 
-import GQL_URI from'./config/keys.js';
+import { GQL_URI } from'./config/keys.js';
 
 const client = new ApolloClient({
   link: new HttpLink({

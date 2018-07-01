@@ -9,7 +9,7 @@ exports[`renders without crashing 1`] = `
     }
   }
 >
-  <CreateUser />
+  <Apollo(Apollo(CreateUser)) />
   <Button
     onPress={[Function]}
     title="Login"
