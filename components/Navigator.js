@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ActivityIndicator } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 
 import Login from './user/Login';
 
@@ -20,9 +22,21 @@ const Navigator = createStackNavigator({
   }
 });
 
-const NavWrapper = () => {
-  return <Login />;
+const NavWrapper = ({ loading,user }) => {
+  console.log(user)
+  if (loading) return <ActivityIndicator size="large" />;
+  if (!user) return <Login />;
   return <Navigator />;
 }
 
-export default NavWrapper;
+const userQuery = gql`
+  query userQuery {
+    user {
+      id
+      email
+    }
+  }
+`
+export default graphql(userQuery, {
+  props: ({ data }) => ({ ...data })
+})(NavWrapper);

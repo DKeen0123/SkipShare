@@ -55,6 +55,6 @@ exports[`renders without crashing 1`] = `
     }
   }
 >
-  <NavWrapper />
+  <Apollo(NavWrapper) />
 </ApolloProvider>
 `;

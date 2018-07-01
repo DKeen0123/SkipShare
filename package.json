@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "apollo-boost": "^0.1.10",
+    "apollo-link-context": "^1.0.8",
     "expo": "^27.0.1",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
