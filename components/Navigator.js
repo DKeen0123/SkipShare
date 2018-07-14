@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import { Text, View, ActivityIndicator } from 'react-native';
+import { Text, View, ActivityIndicator, Button } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { graphql } from 'react-apollo';
+import { graphql, withApollo } from 'react-apollo';
 import gql from 'graphql-tag';
 
 import Login from './user/Login';
+import { signOut } from '../loginUtils';
 
 class Home extends Component {
   render() {
     return (
       <View>
         <Text> textInComponent </Text>
+        <Button
+          onPress={() => {
+            signOut()
+            this.props.client.resetStore();
+            }}
+          title="Log out"
+        />
       </View>
     )
   }
@@ -18,12 +26,11 @@ class Home extends Component {
 
 const Navigator = createStackNavigator({
   Home: {
-    screen: Home
+    screen: withApollo(Home)
   }
 });
 
-const NavWrapper = ({ loading,user }) => {
-  console.log(user)
+const NavWrapper = ({ loading, user }) => {
   if (loading) return <ActivityIndicator size="large" />;
   if (!user) return <Login />;
   return <Navigator />;
