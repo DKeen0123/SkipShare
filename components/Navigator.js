@@ -4,14 +4,20 @@ import { createStackNavigator } from 'react-navigation';
 import { graphql, withApollo } from 'react-apollo';
 import gql from 'graphql-tag';
 
+import navStyles from '../styles/navStyles';
 import Login from './user/Login';
 import { signOut } from '../loginUtils';
 
 class Home extends Component {
+  static navigationOptions = {
+    title: "Home",
+    ...navStyles
+  }
+
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Text>SkipShare</Text>
         <Button
           onPress={() => {
             signOut()
