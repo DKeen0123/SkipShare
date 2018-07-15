@@ -1,28 +1,11 @@
-import React, { Component } from 'react';
-import { Text, View, ActivityIndicator } from 'react-native';
+import React from 'react';
+import { ActivityIndicator } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { graphql, withApollo } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import navStyles from '../styles/navStyles';
 import Login from './user/Login';
-import LogoTitle from './LogoTitle';
-import { signOut } from '../loginUtils';
-
-class Home extends Component {
-  static navigationOptions = {
-    headerTitle: <LogoTitle/>,
-    ...navStyles
-  }
-
-  render() {
-    return (
-      <View>
-        <Text>SkipShare</Text>
-      </View>
-    )
-  }
-}
+import Home from './Home';
 
 const Navigator = createStackNavigator({
   Home: {
