@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Image, View, Button, StyleSheet, Text } from 'react-native'
 import { signOut } from '../loginUtils';
 import { withApollo } from '../node_modules/react-apollo';
-import { Left } from 'native-base';
 
 
 class LogoTitle extends Component {

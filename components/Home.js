@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Image, View, Dimensions, Button } from 'react-native'
 import navStyles from '../styles/navStyles';
 import LogoTitle from './LogoTitle';
 
@@ -9,10 +9,29 @@ export default class Home extends Component {
     ...navStyles
   }
 
+  viewListings = () => {
+
+  }
+
+  createListing = () => {
+
+  }
+
   render() {
     return (
       <View>
-        <Text>SkipShare</Text>
+        <Image
+          source={require('../images/skipshare.png')}
+          style={{width: Dimensions.get('window').width}}
+        />
+        <Button
+          title='View listings'
+          onPress={this.viewListings}
+        />
+        <Button
+          title='Create a new listing'
+          onPress={this.createListing}
+        />
       </View>
     )
   }

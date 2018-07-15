@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Component>
+  <Image
+    source={1}
+    style={
+      Object {
+        "width": 750,
+      }
+    }
+  />
+  <Button
+    onPress={[Function]}
+    title="View listings"
+  />
+  <Button
+    onPress={[Function]}
+    title="Create a new listing"
+  />
+</Component>
+`;
