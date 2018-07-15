@@ -6,10 +6,14 @@ import gql from 'graphql-tag';
 
 import Login from './user/Login';
 import Home from './Home';
+import CreateListing from './CreateListing';
 
 const Navigator = createStackNavigator({
   Home: {
     screen: withApollo(Home)
+  },
+  CreateListing: {
+    screen: withApollo(CreateListing)
   }
 });
 

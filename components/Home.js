@@ -14,7 +14,7 @@ export default class Home extends Component {
   }
 
   createListing = () => {
-
+    this.props.navigation.navigate('CreateListing');
   }
 
   render() {

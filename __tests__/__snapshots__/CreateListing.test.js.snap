@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Component>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+     Create a new listing 
+  </Text>
+</Component>
+`;
